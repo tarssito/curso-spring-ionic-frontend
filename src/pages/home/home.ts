@@ -12,4 +12,9 @@ export class HomePage {
 
   }
 
+  login() {
+    // empilha as páginas add o botão de voltar
+    //this.navCtrl.push('CategoriasPage');
+    this.navCtrl.setRoot('CategoriasPage');
+  }
 }
