@@ -49,4 +49,9 @@ export class HomePage {
     //this.navCtrl.push('CategoriasPage');
     
   }
+
+  signup() {
+    this.navCtrl.push('SignupPage');
+  }
+  
 }
