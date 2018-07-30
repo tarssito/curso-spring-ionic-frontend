@@ -22,6 +22,10 @@ export class ProdutosPage {
   }
 
   ionViewDidLoad() {
+    this.loadData();
+  }
+
+  loadData() {
     let categoriaId = this.navParams.get('categoriaId');
     let loader = this.presentLoading();
     this.produtoService.findByCategoria(categoriaId)
@@ -57,4 +61,10 @@ export class ProdutosPage {
     return loader;
   }
 
+  doRefresh(refresher) {
+    this.loadData();
+    setTimeout(() => {
+      refresher.complete();
+    }, 2000);
+  }
 }
